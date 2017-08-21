@@ -17,6 +17,8 @@
 "stm32f427_437xx\mpu9250.o"
 "stm32f427_437xx\middlesensor.o"
 "stm32f427_437xx\imusystem.o"
+"stm32f427_437xx\altitudesystem.o"
+"stm32f427_437xx\gpssystem.o"
 "stm32f427_437xx\_main.o"
 "stm32f427_437xx\i2ctest.o"
 --library_type=microlib --strict --scatter "STM32F427_437xx\STM32F427_437xx.sct"

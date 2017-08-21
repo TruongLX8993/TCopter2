@@ -889,13 +889,13 @@ ARM Macro Assembler    Page 14
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp --apcs=int
 erwork --depend=stm32f427_437xx\startup_stm32f427_437xx.d -ostm32f427_437xx\sta
-rtup_stm32f427_437xx.o -IC:\Users\truonglxteca\Desktop\ref\droneStm\project\MDK
--ARM\RTE\_TCopter -IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include -IC:\Keil
-_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.10.0\Drivers\CMSIS\Device\ST\STM32F4xx\Includ
-e --predefine="__MICROLIB SETA 1" --predefine="__UVISION_VERSION SETA 522" --pr
-edefine="_RTE_ SETA 1" --predefine="STM32F427xx SETA 1" --list=startup_stm32f42
-7_437xx.lst ..\..\libs\drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\s
-tartup_stm32f427_437xx.s
+rtup_stm32f427_437xx.o -IC:\Users\truonglxteca\TCopter2\droneStm\project\MDK-AR
+M\RTE\_TCopter -IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include -IC:\Keil_v5
+\ARM\PACK\Keil\STM32F4xx_DFP\2.10.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include -
+-predefine="__MICROLIB SETA 1" --predefine="__UVISION_VERSION SETA 522" --prede
+fine="_RTE_ SETA 1" --predefine="STM32F427xx SETA 1" --list=startup_stm32f427_4
+37xx.lst ..\..\libs\drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\star
+tup_stm32f427_437xx.s
 
 
 

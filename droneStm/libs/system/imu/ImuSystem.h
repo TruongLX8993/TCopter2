@@ -14,7 +14,7 @@ void imusystem_saveAccelOffset(u16 *offset);
 
 void imusystem_saveGyroOffset(u16 *offset);
 
-void imusystem_saveMagnetoffset(float matrix[3][],float *vector);
+void imusystem_saveMagnetoffset(float matrix[3][3],float *vector);
 
 void imusystem_update(void);
 
