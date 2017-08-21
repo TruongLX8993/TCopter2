@@ -1,0 +1,25 @@
+--cpu=Cortex-M4.fp
+"stm32f427_437xx\misc.o"
+"stm32f427_437xx\stm32f4xx_gpio.o"
+"stm32f427_437xx\stm32f4xx_i2c.o"
+"stm32f427_437xx\stm32f4xx_rcc.o"
+"stm32f427_437xx\stm32f4xx_tim.o"
+"stm32f427_437xx\stm32f4xx_usart.o"
+"stm32f427_437xx\system_stm32f4xx.o"
+"stm32f427_437xx\startup_stm32f427_437xx.o"
+"stm32f427_437xx\mtime.o"
+"stm32f427_437xx\gpioutils.o"
+"stm32f427_437xx\i2c.o"
+"stm32f427_437xx\i2cutils.o"
+"stm32f427_437xx\uart.o"
+"stm32f427_437xx\sensordata.o"
+"stm32f427_437xx\arrayutils.o"
+"stm32f427_437xx\mpu9250.o"
+"stm32f427_437xx\middlesensor.o"
+"stm32f427_437xx\imusystem.o"
+"stm32f427_437xx\_main.o"
+"stm32f427_437xx\i2ctest.o"
+--library_type=microlib --strict --scatter "STM32F427_437xx\STM32F427_437xx.sct"
+--diag_suppress=L6329 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "STM32F427_437xx.map" -o STM32F427_437xx\STM32F427_437xx.axf
