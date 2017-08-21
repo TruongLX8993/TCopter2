@@ -7,7 +7,7 @@
 
 #define RECEIVER_OPTION_R9DS 1
 
-typedef void (middle_receiver_init)(void);
+typedef void (*middle_receiver_init)(void);
 
 
 /*
@@ -15,14 +15,17 @@ typedef void (middle_receiver_init)(void);
 @ret =0 : no new data.
 */
 
-typedef int (middle_receiver_update)(void);
+typedef int (*middle_receiver_update)(void);
 
 /*
 
 @ret: numble channel
 @out: data channel.
 */
-typedef int (middle_receiver_getChannel)(int *channels);
+typedef int (*middle_receiver_getChannel)(int **channels);
+
+
+typedef void (*middle_receiver_free)(int *channels);
 
 
 typedef struct Receiver{
@@ -30,6 +33,12 @@ typedef struct Receiver{
 	middle_receiver_init init;
 	middle_receiver_update update;
 	middle_receiver_getChannel getChannel; 
+	middle_receiver_free free;
 }Receiver;
 
+
+
+Receiver middle_receiver_getInstance(int option);
+
 #endif
+

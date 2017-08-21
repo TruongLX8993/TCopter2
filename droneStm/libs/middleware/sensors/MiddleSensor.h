@@ -69,11 +69,11 @@ typedef struct BaroSensor{
 
 
 
-typedef void (*gpssensor_Init)();
+typedef void (*gpssensor_Init)(void);
 
-typedef void (*gpssensor_Update)();
+typedef void (*gpssensor_Update)(void);
 
-PositionData gpssensor_ReadPosition();
+PositionData gpssensor_ReadPosition(void);
 
 
 typedef struct GpsSensor{

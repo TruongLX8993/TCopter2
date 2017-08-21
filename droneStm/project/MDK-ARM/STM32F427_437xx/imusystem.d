@@ -38,3 +38,4 @@ stm32f427_437xx\imusystem.o: ..\..\libs\drivers\STM32F4xx_StdPeriph_Driver\inc\s
 stm32f427_437xx\imusystem.o: ..\..\libs\drivers\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fmc.h
 stm32f427_437xx\imusystem.o: ..\..\libs\drivers\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_sai.h
 stm32f427_437xx\imusystem.o: ..\..\libs\lib\data\SensorData.h
+stm32f427_437xx\imusystem.o: ..\..\libs\middleware\sensors\MiddleSensor.h
