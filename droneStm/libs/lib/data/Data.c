@@ -1,4 +1,4 @@
-#include "SensorData.h"
+#include "Data.h"
 
 void sensordata_getRawArray(SensorData in,u16 *raw){
 	
@@ -6,6 +6,7 @@ void sensordata_getRawArray(SensorData in,u16 *raw){
 	raw[Y_INDEX]=in.rawY;
 	raw[Z_INDEX ]=in.rawZ;
 }
+
 
 
 

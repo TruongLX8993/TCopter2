@@ -1,5 +1,5 @@
-#ifndef SENSORDATA_H_
-#define SENSORDATA_H_
+#ifndef DATA_H_
+#define DATA_H_
 
 
 #include "stm32f4xx.h"
@@ -9,6 +9,12 @@
 #define Y_INDEX 1
 
 #define Z_INDEX 2
+
+#define ROLL_INDEX 0
+
+#define PITCH_INDEX 1
+
+#define YAW_INDEX 2
 
 
 typedef struct SensorData{

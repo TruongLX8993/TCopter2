@@ -2,7 +2,7 @@
 #define MIDDLESENSOR_H_
 
 #include "stm32f4xx.h"
-#include "SensorData.h"
+#include "Data.h"
 
 
 

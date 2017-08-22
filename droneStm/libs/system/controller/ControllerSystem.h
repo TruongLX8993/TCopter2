@@ -1,21 +1,21 @@
 
-#ifndef CONTROLLER_H_
-#define CONTROLLER_H_
+#ifndef CONTROLLERSYSTEM_H_
+#define CONTROLLERSYSTEM_H_
+
+#define CONTROLLER_SYS_ERR_NONE 1
 
 
-void controller_init(void);
 
-void controller_update(void);
+int 	controller_system_init(void);
 
-float controller_getRoll(void);
+int 	controller_system_update(void);
 
-float controller_getPitch(void);
+float controller_system_get_roll(void);
 
-float controller_getYaw(void);
+float controller_system_get_pitch(void);
 
-int controller_isTurnOnHoldAlt(void);
+float controller_system_get_yaw(void);
 
-int controller_isTurnOnHoldPos(void);
-
+float controller_system_get_thr(void);
 
 #endif

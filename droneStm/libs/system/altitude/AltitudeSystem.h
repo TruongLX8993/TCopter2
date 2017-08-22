@@ -9,11 +9,14 @@ Altitude System
 
 #define ALTITUDESYSTEM_H_
 
-void altitude_system_Init(void);
+#define ALT_SYSTEM_ERR_NONE 1
 
-void altitude_system_Update(void);
 
-float altitude_system_GetAltitude(void);
+int altitude_system_init(void);
+
+int altitude_system_update(void);
+
+float altitude_system_getAltitude(void);
 
 #endif 
 

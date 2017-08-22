@@ -1,6 +1,6 @@
 stm32f427_437xx\mpu9250.o: ..\..\libs\lib\peripherals\mpu9250\MPU9250.c
 stm32f427_437xx\mpu9250.o: ..\..\libs\lib\peripherals\mpu9250\MPU9250.h
-stm32f427_437xx\mpu9250.o: ..\..\libs\lib\data\SensorData.h
+stm32f427_437xx\mpu9250.o: ..\..\libs\lib\data\Data.h
 stm32f427_437xx\mpu9250.o: ..\..\libs\drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
 stm32f427_437xx\mpu9250.o: ..\..\libs\drivers\CMSIS\Include\core_cm4.h
 stm32f427_437xx\mpu9250.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h

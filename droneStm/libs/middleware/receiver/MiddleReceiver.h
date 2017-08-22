@@ -5,7 +5,7 @@
 
 
 
-#define RECEIVER_OPTION_R9DS 1
+#define MIDDLE_RECEIVER_R9DS_OPTION 1
 
 typedef void (*middle_receiver_init)(void);
 
