@@ -37,6 +37,6 @@ stm32f427_437xx\i2c.o: ..\..\libs\drivers\STM32F4xx_StdPeriph_Driver\inc\stm32f4
 stm32f427_437xx\i2c.o: ..\..\libs\drivers\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma2d.h
 stm32f427_437xx\i2c.o: ..\..\libs\drivers\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fmc.h
 stm32f427_437xx\i2c.o: ..\..\libs\drivers\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_sai.h
+stm32f427_437xx\i2c.o: ..\..\libs\std_time\Timeout.h
 stm32f427_437xx\i2c.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
-stm32f427_437xx\i2c.o: ..\..\libs\service\delay\delay.h
 stm32f427_437xx\i2c.o: ..\..\libs\middleware\gpio\GpioUtils.h

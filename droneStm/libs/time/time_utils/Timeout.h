@@ -11,11 +11,13 @@ typedef struct Timeout{
 }Timeout;
 
 
-void timeout_init(Timeout *timeout,u32 duration);
+void timeout_init_millis(Timeout *timeout,u32 millis);
+
+void timeout_init_micros(Timeout *timeout,u32 micros);
 
 void timeout_start(Timeout *timeout);
 
-int timeout_isTimeOut(Timeout timeout);
+int timeout_isTimeOut(Timeout *timeout);
 
 
 #endif

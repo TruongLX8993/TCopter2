@@ -6,6 +6,7 @@ void position_holding_system_init(void);
 
 void position_holding_system_update(float *position,float *euler,float *accel,float *out);
 
-void holding_position_system_reset();
+void position_holding_system_reset(void);
 
 #endif
+

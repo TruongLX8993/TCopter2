@@ -2,16 +2,13 @@
 #define ALTITUDEHOLDINGSYSTEM_H_
 
 
-typedef struct AltitudeHoldingSystemData{
-
-}AltitudeHoldingSystemData;
 
 
-void 	altitude_holding_system_init();
+void 	altitude_holding_system_init(void);
 
 float altitude_holding_system_update(float altitude,float *accel,float *euler);
 
-void 	altitude_holding_reset();
+void 	altitude_holding_reset(void);
 
 
 

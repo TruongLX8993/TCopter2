@@ -1,4 +1,4 @@
-#include "MTime.h"
+#include "SystemTime.h"
 
 
 
@@ -16,9 +16,12 @@ TIM_TypeDef* TIME_TIMS[]={TIM2};
 
 const u32 TIME_RCC_S[]={RCC_APB1Periph_TIM2};
 	
+
+
+
 void time_initRCC(int sensi){
-	if(sensi==TIME_SENSI_MIC)
-		RCC_APB1PeriphClockCmd(TIME_RCC_S[TIME_SENSI_MIC], ENABLE);
+	if(sensi==STIME_SENSI_MIC)
+		RCC_APB1PeriphClockCmd(TIME_RCC_S[STIME_SENSI_MIC], ENABLE);
 	return;
 }
 
@@ -32,7 +35,7 @@ u32 time_getPeriod(int sensi){
 
 u16 time_getPrescaler(int sensi){
 	
-	if(sensi==TIME_SENSI_MIC)
+	if(sensi==STIME_SENSI_MIC)
 		return ((SystemCoreClock)/2/time_getFreq(sensi))-1;
 	return 0;
 }
@@ -47,7 +50,7 @@ int mTimeSensi;
 
 
 
-void initTime(int timeSensi){
+void stime_init(int timeSensi){
 
 	
 	TIM_TimeBaseInitTypeDef  timeConfig;
@@ -63,18 +66,18 @@ void initTime(int timeSensi){
 	
 }
 
-u32 getMillis(void){
+u32 stime_get_millis(void){
 	
-	if(mTimeSensi==TIME_SENSI_MIC)
-		return getMicros()/1000;
+	if(mTimeSensi==STIME_SENSI_MIC)
+		return stime_get_micros()/1000;
 	return TIM_GetCounter(time_getTim(mTimeSensi));
 }
 
 
-u32 getMicros(void){
+u32 stime_get_micros(void){
 	
 	
-	if(mTimeSensi==TIME_SENSI_MIL)
-		return getMillis()*1000;
+	if(mTimeSensi==STIME_SENSI_MIL)
+		return stime_get_millis()*1000;
 	return TIM_GetCounter(time_getTim(mTimeSensi));
 }

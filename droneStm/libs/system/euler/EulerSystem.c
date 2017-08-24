@@ -13,3 +13,12 @@ void euler_system_update(float *accelData,float *gyroData,float *magnetData){
 	
 }
 
+void euler_system_getEulerData(float *euler){
+
+
+}
+
+int euler_system_getState(void){
+
+	return 0;
+}

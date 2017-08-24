@@ -38,4 +38,6 @@ stm32f427_437xx\mpu9250.o: ..\..\libs\drivers\STM32F4xx_StdPeriph_Driver\inc\stm
 stm32f427_437xx\mpu9250.o: ..\..\libs\drivers\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma2d.h
 stm32f427_437xx\mpu9250.o: ..\..\libs\drivers\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fmc.h
 stm32f427_437xx\mpu9250.o: ..\..\libs\drivers\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_sai.h
+stm32f427_437xx\mpu9250.o: ..\..\libs\middleware\communication\i2c\I2CUtils.h
 stm32f427_437xx\mpu9250.o: ..\..\libs\middleware\communication\i2c\I2C.h
+stm32f427_437xx\mpu9250.o: ..\..\libs\time\time_utils\Timeout.h

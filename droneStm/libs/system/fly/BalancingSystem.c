@@ -6,7 +6,7 @@ void balancing_system_init(void){
 
 }
 
-void balancing_system_update(float *controls,float *euler,float *gyro,float *pwms){
+void balancing_system_update(float *ctr,float *euler,float *gyro,float *err){
 
 }
 

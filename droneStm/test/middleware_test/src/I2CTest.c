@@ -11,7 +11,7 @@ int i2cTest_readRegister(void){
 
 	u8 buffer;
 	i2c_Init(MI2C_2);
-	i2cUtils_ReadBytesFromRegiter(MI2C_2,I2C_TEST_ADDR,I2C_TEST_REG,&buffer,1);
+	i2c_utils_read_bytes_from_register(MI2C_2,I2C_TEST_ADDR,I2C_TEST_REG,&buffer,1,100);
 	return I2C_TEST_OUT==buffer;
 }
 

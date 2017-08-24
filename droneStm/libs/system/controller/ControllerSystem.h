@@ -4,6 +4,7 @@
 
 #define CONTROLLER_SYS_ERR_NONE 1
 
+#define CONTROLLER_SYS_ERR_LOST -1
 
 
 int 	controller_system_init(void);

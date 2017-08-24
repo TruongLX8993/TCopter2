@@ -38,4 +38,5 @@ stm32f427_437xx\i2ctest.o: ..\..\libs\drivers\STM32F4xx_StdPeriph_Driver\inc\stm
 stm32f427_437xx\i2ctest.o: ..\..\libs\drivers\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma2d.h
 stm32f427_437xx\i2ctest.o: ..\..\libs\drivers\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fmc.h
 stm32f427_437xx\i2ctest.o: ..\..\libs\drivers\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_sai.h
+stm32f427_437xx\i2ctest.o: ..\..\libs\time\time_utils\Timeout.h
 stm32f427_437xx\i2ctest.o: ..\..\test\middleware_test\inc\I2CTest.h

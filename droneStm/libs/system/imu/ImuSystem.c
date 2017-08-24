@@ -20,11 +20,11 @@ void imu_system_startCalibrate(void){
 	 
 }
 
-void imu_system_saveAccelOffset(u16 *offset){
+void imu_system_saveAccelOffset(uint16_t *offset){
 
 }
 
-void imu_system_saveGyroOffset(u16 *offset){
+void imu_system_saveGyroOffset(uint16_t *offset){
 
 }
 
@@ -39,23 +39,7 @@ int imu_system_update(void){
 }
 
 
-SensorData imu_system_getAccel(void){
-	
-	SensorData ret;
-	return ret;
-}
 
-SensorData imu_system_getMagnet(void){
-	
-	SensorData ret;
-	return ret;
-}
-
-SensorData imu_system_getGyro(void){
-
-	SensorData ret;
-	return ret;
-}
 
 void imu_system_getAccel(float *out){
 

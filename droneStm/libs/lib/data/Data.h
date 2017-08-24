@@ -19,7 +19,7 @@
 
 typedef struct SensorData{
 	float x,y,z;
-	u16 rawX,rawY,rawZ;
+	s16 rawX,rawY,rawZ;
 }SensorData;
 
 typedef struct PositionData{

@@ -3,108 +3,60 @@
 <pre>
 <h1>µVision Build Log</h1>
 <h2>Tool Versions:</h2>
-IDE-Version: µVision V5.22.0.0
-Copyright (C) 2016 ARM Ltd and ARM Germany GmbH. All rights reserved.
+IDE-Version: µVision V5.24.2.0
+Copyright (C) 2017 ARM Ltd and ARM Germany GmbH. All rights reserved.
 License Information: truong truonglxteca, teca, LIC=21ENN-YGR5G-TE0H5-GCA28-Y2SWD-1KLKF
  
 Tool Versions:
-Toolchain:       MDK-ARM Plus  Version: 5.22
+Toolchain:       MDK-ARM Plus  Version: 5.24.1
 Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
-C Compiler:      Armcc.exe V5.06 update 4 (build 422)
-Assembler:       Armasm.exe V5.06 update 4 (build 422)
-Linker/Locator:  ArmLink.exe V5.06 update 4 (build 422)
-Library Manager: ArmAr.exe V5.06 update 4 (build 422)
-Hex Converter:   FromElf.exe V5.06 update 4 (build 422)
-CPU DLL:         SARMCM3.DLL V5.22
-Dialog DLL:      DCM.DLL V1.13.9.0
-Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V2.0.18.0
-Dialog DLL:      TCM.DLL V1.21.0.0
+C Compiler:      Armcc.exe V5.06 update 5 (build 528)
+Assembler:       Armasm.exe V5.06 update 5 (build 528)
+Linker/Locator:  ArmLink.exe V5.06 update 5 (build 528)
+Library Manager: ArmAr.exe V5.06 update 5 (build 528)
+Hex Converter:   FromElf.exe V5.06 update 5 (build 528)
+CPU DLL:         SARMCM3.DLL V5.24.1
+Dialog DLL:      DCM.DLL V1.16.0.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.1.0
+Dialog DLL:      TCM.DLL V1.32.0.0
  
 <h2>Project:</h2>
 C:\Users\truonglxteca\TCopter2\droneStm\project\MDK-ARM\Project.uvprojx
-Project File Date:  08/21/2017
+Project File Date:  08/24/2017
 
 <h2>Output:</h2>
-*** Using Compiler 'V5.06 update 4 (build 422)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+*** Using Compiler 'V5.06 update 5 (build 528)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+*** Warning: Using Microlib and C++ file(s) might cause the linker to fail !
+  
 Build target 'TCopter'
-compiling stm32f4xx_gpio.c...
-compiling stm32f4xx_i2c.c...
-compiling misc.c...
-compiling stm32f4xx_usart.c...
-compiling stm32f4xx_rcc.c...
-compiling stm32f4xx_tim.c...
-compiling MTime.c...
-compiling system_stm32f4xx.c...
-compiling GpioUtils.c...
-compiling UART.cpp...
-compiling I2CUtils.c...
-compiling I2C.c...
-compiling Constraint.cpp...
-compiling Data.c...
-compiling ArrayUtils.cpp...
 compiling Timeout.c...
-compiling Pid.cpp...
-compiling Calibrate.cpp...
-compiling MPU9250.c...
-compiling MiddleEulerCalculator.c...
-compiling MiddleSensor.cpp...
-compiling MiddleReceiver.c...
-compiling GpsSystem.c...
-compiling AltitudeSystem.c...
-..\..\libs\system\altitude\AltitudeSystem.c(17): warning:  #1-D: last line of file ends without a newline
-  }
-..\..\libs\system\altitude\AltitudeSystem.c: 1 warning, 0 errors
-compiling ControllerSystem.c...
-compiling AltitudeHoldingSystem.c...
-compiling BalancingSystem.c...
-..\..\libs\system\fly\BalancingSystem.h(13): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\..\libs\system\fly\BalancingSystem.c(16): warning:  #1-D: last line of file ends without a newline
-  }
-..\..\libs\system\fly\BalancingSystem.c: 2 warnings, 0 errors
-compiling PositionHoldingSystem .c...
-compiling ControlCenter.c...
-..\..\libs\control_center\ControlCenter.c(3): warning:  #1-D: last line of file ends without a newline
-  void control_center_
-..\..\libs\control_center\ControlCenter.c(3): error:  #70: incomplete type is not allowed
-  void control_center_
-..\..\libs\control_center\ControlCenter.c(3): error: At end of source:  #65: expected a ";"
-..\..\libs\control_center\ControlCenter.c: 1 warning, 2 errors
-compiling ImuSystem.cpp...
-compiling ErrorHandler.c...
-..\..\libs\error_handler\ErrorHandler.c(19): warning:  #1-D: last line of file ends without a newline
-  	
-..\..\libs\error_handler\ErrorHandler.c: 1 warning, 0 errors
-compiling EulerSystem.c...
-compiling I2CTest.c...
-compiling _main.c...
-..\..\libs\system\imu\ImuSystem.h(31): error:  #147: declaration is incompatible with "SensorData imu_system_getAccel(void)"  (declared at line 25)
-  void imu_system_getAccel(float *out);
-..\..\libs\system\imu\ImuSystem.h(33): error:  #147: declaration is incompatible with "SensorData imu_system_getGyro(void)"  (declared at line 29)
-  void imu_system_getGyro(float *out);
-..\..\libs\system\imu\ImuSystem.h(35): error:  #147: declaration is incompatible with "SensorData imu_system_getMagnet(void)"  (declared at line 27)
-  void imu_system_getMagnet(float *out);
-_main.c: 0 warnings, 3 errors
-"STM32F427_437xx\STM32F427_437xx.axf" - 5 Error(s), 5 Warning(s).
+linking...
+Program Size: Code=520 RO-data=444 RW-data=0 ZI-data=2816  
+FromELF: creating hex file...
+"STM32F427_437xx\STM32F427_437xx.axf" - 0 Error(s), 0 Warning(s).
 
 <h2>Software Packages used:</h2>
 
 Package Vendor: ARM
-                http://www.keil.com/pack/ARM.CMSIS.5.0.0.pack
-                ARM::CMSIS:CORE:5.0.0
+                http://www.keil.com/pack/ARM.CMSIS.5.0.1.pack
+                ARM.CMSIS.5.0.1
                 CMSIS (Cortex Microcontroller Software Interface Standard)
-   * Component: CORE Version: 5.0.0
+   * Component: CORE Version: 5.0.1
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.10.0.pack
+                Keil.STM32F4xx_DFP.2.10.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
 
 <h2>Collection of Component include folders:</h2>
-  C:\Users\truonglxteca\TCopter2\droneStm\project\MDK-ARM\RTE\_TCopter
-  C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include
+  .\RTE\_TCopter
+  C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include
   C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.10.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
 
 <h2>Collection of Component Files used:</h2>
 
-   * Component: ARM::CMSIS:CORE:5.0.0
-Target not created.
-Build Time Elapsed:  00:00:17
+   * Component: ARM::CMSIS:CORE:5.0.1
+Build Time Elapsed:  00:00:02
 </pre>
 </body>
 </html>

@@ -38,3 +38,4 @@ stm32f427_437xx\i2cutils.o: ..\..\libs\drivers\STM32F4xx_StdPeriph_Driver\inc\st
 stm32f427_437xx\i2cutils.o: ..\..\libs\drivers\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma2d.h
 stm32f427_437xx\i2cutils.o: ..\..\libs\drivers\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fmc.h
 stm32f427_437xx\i2cutils.o: ..\..\libs\drivers\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_sai.h
+stm32f427_437xx\i2cutils.o: ..\..\libs\time\time_utils\Timeout.h

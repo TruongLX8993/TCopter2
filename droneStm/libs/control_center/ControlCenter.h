@@ -3,6 +3,6 @@
 
 #include "ControllerSystemCallback.h"
 
-
+ControllerSystemCallback control_center_create_call_back(void);
 
 #endif

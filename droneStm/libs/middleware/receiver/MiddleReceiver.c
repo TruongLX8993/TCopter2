@@ -1,12 +1,12 @@
 #include "MiddleReceiver.h"
 
 
-Receiver middle_receiver_getRD9ReceiverInstance(void);
+MiddleReceiver middle_receiver_getRD9ReceiverInstance(void);
 
 
-Receiver middle_receiver_getInstance(int option){
+MiddleReceiver middle_receiver_getInstance(int option){
 	
-	Receiver ret;	
+	MiddleReceiver ret;	
 	if(option==MIDDLE_RECEIVER_R9DS_OPTION)
 		ret = middle_receiver_getRD9ReceiverInstance();
 	return ret;
@@ -16,10 +16,10 @@ Receiver middle_receiver_getInstance(int option){
 
 /*-------------------------------create r9ds instance ------------------------------------------------*/
 
-Receiver middle_receiver_getRD9ReceiverInstance(){
+MiddleReceiver middle_receiver_getRD9ReceiverInstance(){
 	
 	
-	Receiver ret;
+	MiddleReceiver ret;
 	return ret;
 }
 
@@ -34,7 +34,7 @@ int middle_receiver_r9d_update(void){
 	return 0;
 }
 
-int middle_receiver_r9d_getChannel(int **channels){
+int middle_receiver_r9d_get_data_channels(int **channels){
 
 	return 0;
 }

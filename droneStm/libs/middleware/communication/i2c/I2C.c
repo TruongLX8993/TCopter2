@@ -1,6 +1,5 @@
 #include "I2C.h"
 #include "stdio.h"
-#include "delay.h"
 #include "GpioUtils.h"
 
 
@@ -94,48 +93,51 @@ void i2c_Init(int i2cName){
 	i2cConfig.I2C_AcknowledgedAddress = I2C_AcknowledgedAddress_7bit;
 	I2C_Init(MI2C_POITERS[index], &i2cConfig);	
 	I2C_Cmd(MI2C_POITERS[index], ENABLE); 
-	
-	
-//	gpioConfig.GPIO_Pin=GPIO_Pin_10|GPIO_Pin_11;
-//	gpioConfig.GPIO_Mode=GPIO_Mode_AF;
-//	gpioConfig.GPIO_OType=GPIO_OType_OD;
-//	gpioConfig.GPIO_PuPd = GPIO_PuPd_UP;
-//	gpioConfig.GPIO_Speed = GPIO_Speed_100MHz;  
-//	GPIO_Init(GPIOB, &gpioConfig);
-
-//	GPIO_PinAFConfig(GPIOB,GPIO_PinSource10,GPIO_AF_I2C2);
-//	GPIO_PinAFConfig(GPIOB,GPIO_PinSource11,GPIO_AF_I2C2);
-	
-	
 }
 
-int i2c_Start(int i2cName,u8 addr,u32 dir){
+int i2c_Start(int i2cName,u8 addr,u32 dir,Timeout timeout){
 
 	I2C_TypeDef* i2cPointer=getI2C(i2cName);
 	
 	
-	while(I2C_GetFlagStatus(i2cPointer, I2C_FLAG_BUSY));
+	while(I2C_GetFlagStatus(i2cPointer, I2C_FLAG_BUSY)){
+		if(timeout_isTimeOut(timeout))
+			return MI2C_ERR_TIME_OUT;
+	}
 	I2C_GenerateSTART(i2cPointer, ENABLE);
 	
-	while(!I2C_CheckEvent(i2cPointer, I2C_EVENT_MASTER_MODE_SELECT));
+	while(!I2C_CheckEvent(i2cPointer, I2C_EVENT_MASTER_MODE_SELECT)){
+		if(timeout_isTimeOut(timeout))
+			return MI2C_ERR_TIME_OUT;
+	}
+	
 	I2C_Send7bitAddress(i2cPointer, addr, dir);
-	if(dir == I2C_Direction_Transmitter)
-		while(!I2C_CheckEvent(i2cPointer, I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED));
-	else if(dir == I2C_Direction_Receiver)
-		while(!I2C_CheckEvent(i2cPointer, I2C_EVENT_MASTER_RECEIVER_MODE_SELECTED));
+	if(dir == I2C_Direction_Transmitter){
+		while(!I2C_CheckEvent(i2cPointer, I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED)){
+			if(timeout_isTimeOut(timeout))
+				return MI2C_ERR_TIME_OUT;
+		}
+	}
+	else if(dir == I2C_Direction_Receiver){
+		while(!I2C_CheckEvent(i2cPointer, I2C_EVENT_MASTER_RECEIVER_MODE_SELECTED)){
+			if(timeout_isTimeOut(timeout))
+				return MI2C_ERR_TIME_OUT;
+		}
+	}
 	else
 		return 0;
 	
 	return 1;
 }
 
-int i2c_Stop(int i2cName){
+int i2c_Stop(int i2cName,Timeout timeout){
 
 	I2C_GenerateSTOP(getI2C(i2cName), ENABLE);
+	
 	return 1;
 }
 
-int i2c_WriteBytes(u8* data,int length,int i2cName){
+int i2c_WriteBytes(u8* data,int length,int i2cName,Timeout timeout){
 	
 	
 	
@@ -148,9 +150,10 @@ int i2c_WriteBytes(u8* data,int length,int i2cName){
 	return 1;
 }
 
-int i2c_ReadBytes(u8 *dataout,int length,int i2cName){
+int i2c_ReadBytes(u8 *dataout,int length,int i2cName,Timeout timeout){
 
 	I2C_TypeDef* i2cPointer=getI2C(i2cName);
+	
 	
 	
 	I2C_AcknowledgeConfig(i2cPointer, ENABLE);
@@ -158,9 +161,11 @@ int i2c_ReadBytes(u8 *dataout,int length,int i2cName){
 		
 		if(i==length-1){
 			I2C_AcknowledgeConfig(i2cPointer, DISABLE);
-			i2c_Stop(i2cName);
+			i2c_Stop(i2cName,timeout);
 		}
-		while(!I2C_CheckEvent(i2cPointer, I2C_EVENT_MASTER_BYTE_RECEIVED));
+		while(!I2C_CheckEvent(i2cPointer, I2C_EVENT_MASTER_BYTE_RECEIVED)){
+		
+		}
 		dataout[i]=I2C_ReceiveData(i2cPointer);
 	}	
 	return 1;

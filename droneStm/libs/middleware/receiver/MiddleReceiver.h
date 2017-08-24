@@ -7,7 +7,11 @@
 
 #define MIDDLE_RECEIVER_R9DS_OPTION 1
 
-typedef void (*middle_receiver_init)(void);
+
+/*
+ 
+*/
+typedef void (*middle_receiver_init)(u32 timeout_millis);
 
 
 /*
@@ -22,23 +26,25 @@ typedef int (*middle_receiver_update)(void);
 @ret: numble channel
 @out: data channel.
 */
-typedef int (*middle_receiver_getChannel)(int **channels);
+typedef int (*middle_receiver_get_data_channels)(int **channels);
 
+typedef int (*middle_receiver_get_data_channel)(int channelId);
 
 typedef void (*middle_receiver_free)(int *channels);
 
 
-typedef struct Receiver{
+typedef struct MiddleReceiver{
 	
 	middle_receiver_init init;
 	middle_receiver_update update;
-	middle_receiver_getChannel getChannel; 
+	middle_receiver_get_data_channels getChannels; 
+	middle_receiver_get_data_channel getChannel;
 	middle_receiver_free free;
-}Receiver;
+}MiddleReceiver;
 
 
 
-Receiver middle_receiver_getInstance(int option);
+MiddleReceiver middle_receiver_getInstance(int option);
 
 #endif
 

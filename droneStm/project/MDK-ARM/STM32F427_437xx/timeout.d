@@ -1,5 +1,5 @@
-stm32f427_437xx\timeout.o: ..\..\libs\std_time\Timeout.c
-stm32f427_437xx\timeout.o: ..\..\libs\std_time\Timeout.h
+stm32f427_437xx\timeout.o: ..\..\libs\time\time_utils\Timeout.c
+stm32f427_437xx\timeout.o: ..\..\libs\time\time_utils\Timeout.h
 stm32f427_437xx\timeout.o: ..\..\libs\drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
 stm32f427_437xx\timeout.o: ..\..\libs\drivers\CMSIS\Include\core_cm4.h
 stm32f427_437xx\timeout.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
@@ -37,3 +37,4 @@ stm32f427_437xx\timeout.o: ..\..\libs\drivers\STM32F4xx_StdPeriph_Driver\inc\stm
 stm32f427_437xx\timeout.o: ..\..\libs\drivers\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma2d.h
 stm32f427_437xx\timeout.o: ..\..\libs\drivers\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fmc.h
 stm32f427_437xx\timeout.o: ..\..\libs\drivers\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_sai.h
+stm32f427_437xx\timeout.o: ..\..\libs\time\SystemTime.h

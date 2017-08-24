@@ -46,9 +46,6 @@ int loop(){
 	if(ret!=CONTROLLER_SYS_ERR_NONE)
 		error_handler_update_controller();
 	
-
-	
-	
 	return 1;
 }
 
